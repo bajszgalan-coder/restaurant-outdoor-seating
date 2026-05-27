@@ -16,7 +16,7 @@ Dishwashing capacity and bottlenecks
 Objective
 The main objective of the simulation was to evaluate whether the restaurant can maintain service quality after expanding seating capacity.
 Service-Level Constraint:
-No more than 10–12% of customers should wait longer than 30 minutes per course
+No more than 10–12% of customers should wait longer than 30 minutes between ordering and recieving. 
 Business Goal:
 Determine the most cost-effective combination of:
 staffing (waiters, chefs)
@@ -75,16 +75,19 @@ Key Results
 Baseline Scenario (Indoor Only)
 Service level: ~2.70% SLA violations
 Profit: ~€214,351
+
 Outdoor Expansion (No changes)
 Service level: ~58.26% SLA violations
 Profit: ~€20,043
 → Significant degradation in performance due to overload
+
 Equipment and Staffing Scenarios
 Testing showed that:
 Increasing plates alone does not solve system congestion
 Upgrading dishwasher improves throughput but is not sufficient
 Adding waiters improves service flow but does not remove core bottleneck
 Increasing chef capacity has the strongest impact on system stability
+
 Optimal Configuration
 The best-performing configuration achieved:
 ~3.18% SLA violations (customers waiting > 30 minutes)
@@ -98,6 +101,7 @@ This configuration successfully balances:
 service quality
 operational throughput
 profitability
+
 Key Insight
 The simulation identifies chef capacity as the primary system bottleneck.
 Even when improving:
@@ -106,18 +110,21 @@ plate availability
 waiter staffing
 the system remains constrained unless chef capacity is increased.
 This demonstrates that performance is not linearly improved by adding resources; instead, it is governed by bottleneck-driven throughput dynamics.
+
 Conclusion
 The analysis shows that expanding the restaurant without adjusting internal capacity leads to severe service degradation.
 However, a carefully optimized resource configuration enables:
 compliance with service-level targets
 high system throughput
 maximized profitability under increased demand
+
 Recommendation:
 To support outdoor seating expansion, the restaurant should:
 upgrade dishwasher capacity and speed
 increase plate availability
 add at least one additional waiter
 prioritize increasing chef capacity as the key operational improvement
+
 Technologies Used
 AnyLogic (Discrete-Event Simulation, Java-based modeling)
 Java (agent logic and event programming)
